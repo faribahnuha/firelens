@@ -11,7 +11,7 @@ FireLens is a static decision-support prototype for the NASA Space Apps Challeng
 - Demonstrates the sensor transition with raw and harmonized timelines.
 - Replays September 2020 as a responder-oriented historical review.
 - Maps 922 approximate activity-grid polygons for the showcase month.
-- Provides a retrospective 2023 Seasonal Readiness Outlook.
+- Provides a retrospective 2023–2026 Seasonal Readiness Outlook.
 - Exports monthly evidence as CSV.
 - Exposes validation, uncertainty, data freshness, and limitations.
 
@@ -21,7 +21,7 @@ For California in September 2020, the processed dataset reports 6,360 harmonized
 
 ## Seasonal outlook
 
-The outlook is a retrospective planning forecast for 2023 using data available through December 2022. Three season-matched models were compared with chronological backtesting. The selected seasonal-median model had a mean absolute error of approximately 452 FAUs over 72 held-out months. Confidence is **low**. August, September, and October fall in the peak-season readiness category.
+The outlook is a retrospective planning forecast for 2023–2026 using data available through December 2022. Three season-matched models were compared with chronological backtesting. The selected seasonal-median model had a mean absolute error of approximately 452 FAUs over 72 held-out months. Confidence is **low**. August, September, and October fall in the peak-season readiness category. Monthly forecasts repeat across the four years because no post-2022 observations, weather inputs, or trend model are used.
 
 The outlook is not observed current activity, a weather forecast, an emergency warning, evacuation guidance, or a prediction of individual fires.
 

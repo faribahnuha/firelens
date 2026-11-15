@@ -33,8 +33,10 @@ The optional `current_snapshot.json` is a machine-readable **unavailable** statu
 
 ### Seasonal outlook export
 
-`seasonal_outlook.json` is a retrospective, as-of-2022 projection for 2023,
-not observed current activity or a live forecast. The backtest evaluates
+`seasonal_outlook.json` is a 2026 seasonal planning outlook using historical
+observations through December 2022, not observed 2026 activity or a weather-based
+fire forecast. The target year is configurable and the forecast horizon is
+computed from the historical cutoff; a four-year gap adds substantial uncertainty. The backtest evaluates
 season-matched methods only on VIIRS-primary months, because the older MODIS
 harmonized values use calibration factors estimated using later overlap years.
 The seasonal forecast can still be biased by unverified satellite coverage,

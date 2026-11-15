@@ -3,8 +3,10 @@ import type { SeasonalOutlook } from "../types/firelens";
 import { formatInteger, formatPeriod, ordinal } from "../utils/formatters";
 
 function SeasonalOutlookPanel({ outlook }: { outlook: SeasonalOutlook }) {
-  const peak = outlook.forecasts.find((item) => item.readiness_category === "peak_season_readiness");
-  const [period, setPeriod] = useState(peak?.target_month ?? outlook.forecasts[0]?.target_month ?? "");
+  const years = [...new Set(outlook.forecasts.map((item) => item.target_month.slice(0, 4)))].sort();
+  const [year, setYear] = useState(years.at(-1) ?? "");
+  const [month, setMonth] = useState("08");
+  const period = `${year}-${month}`;
   const forecast = outlook.forecasts.find((item) => item.target_month === period) ?? outlook.forecasts[0];
   if (!forecast) return null;
 
@@ -22,11 +24,18 @@ function SeasonalOutlookPanel({ outlook }: { outlook: SeasonalOutlook }) {
           <p className="section-label">Retrospective planning prediction</p>
           <h2 id="outlook-title">Seasonal Readiness Outlook</h2>
         </div>
-        <label className="outlook-select">Forecast month
-          <select value={period} onChange={(event) => setPeriod(event.target.value)}>
-            {outlook.forecasts.map((item) => <option key={item.target_month} value={item.target_month}>{formatPeriod(item.target_month)}</option>)}
-          </select>
-        </label>
+        <div className="outlook-selects">
+          <label className="outlook-select">Forecast year
+            <select value={year} onChange={(event) => setYear(event.target.value)}>
+              {years.map((item) => <option key={item} value={item}>{item}</option>)}
+            </select>
+          </label>
+          <label className="outlook-select">Forecast month
+            <select value={month} onChange={(event) => setMonth(event.target.value)}>
+              {Array.from({ length: 12 }, (_, index) => String(index + 1).padStart(2, "0")).map((item) => <option key={item} value={item}>{formatPeriod(`2020-${item}`).replace(" 2020", "")}</option>)}
+            </select>
+          </label>
+        </div>
       </div>
       <div className="outlook-result">
         <div><span>Readiness</span><strong>{labels[forecast.readiness_category]}</strong></div>
@@ -35,7 +44,7 @@ function SeasonalOutlookPanel({ outlook }: { outlook: SeasonalOutlook }) {
         <div><span>Confidence</span><strong>{forecast.confidence_level}</strong></div>
       </div>
       <p className="outlook-note">
-        Planning outlook trained through {outlook.meta.data_through}; not observed current activity. Backtested MAE: {formatInteger(outlook.held_out_error.value_fau)} FAUs across {outlook.held_out_error.held_out_months} months.
+        Planning outlook trained through {outlook.meta.data_through}; not observed current activity. Values repeat across 2023–2026 because no post-2022 observations, weather inputs, or trend model are used. Backtested MAE: {formatInteger(outlook.held_out_error.value_fau)} FAUs across {outlook.held_out_error.held_out_months} months.
       </p>
     </section>
   );

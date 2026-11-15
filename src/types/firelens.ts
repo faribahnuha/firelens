@@ -95,6 +95,8 @@ export interface SeasonalOutlook {
     data_through: string;
     is_observed_current_activity: false;
     product_type: string;
+    forecast_start_year?: number;
+    forecast_end_year?: number;
   };
   region: FireLensRegion;
   forecast_method: string;

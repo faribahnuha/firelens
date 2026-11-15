@@ -352,6 +352,7 @@ h1 {
 .map-empty { display: grid; place-items: center; padding: 2rem; background: var(--color-bg); color: var(--color-text-muted); text-align: center; }
 .outlook-card--peak_season_readiness { border-top: 0.3rem solid var(--color-accent); }
 .outlook-select { display: grid; gap: 0.35rem; color: var(--color-text-muted); font-size: 0.75rem; }
+.outlook-selects { display: flex; gap: 0.6rem; }
 .outlook-select select { padding: 0.65rem; border: 1px solid var(--color-border); border-radius: 0.5rem; background: var(--color-bg); color: var(--color-text); }
 .outlook-result { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1.5rem; }
 .outlook-result div { display: grid; gap: 0.35rem; padding: 1rem; border: 1px solid var(--color-border); border-radius: 0.7rem; background: var(--color-bg); }
@@ -605,6 +606,8 @@ td:first-child {
   .outlook-result { grid-template-columns: 1fr; }
   .data-actions { flex-direction: column; }
   .method-panel { width: 100%; }
+  .outlook-selects { width: 100%; }
+  .outlook-select { flex: 1; }
 }
 
 @media (min-width: 38.01rem) and (max-width: 62rem) {
