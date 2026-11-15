@@ -117,6 +117,68 @@ h1 {
   line-height: 1.7;
 }
 
+.data-status {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  max-width: 44rem;
+  margin-bottom: 1rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.data-status--mock {
+  border-color: var(--color-accent);
+}
+
+.data-status__symbol {
+  display: grid;
+  flex: 0 0 auto;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-accent-dark);
+  font-weight: 900;
+}
+
+.data-status div {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.data-status span {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.data-status .data-status__symbol {
+  color: var(--color-accent-dark);
+}
+
+.loading-message {
+  color: var(--color-text-muted);
+}
+
+.error-card {
+  max-width: 44rem;
+  padding: 1.5rem;
+  border: 1px solid #f39a8e;
+  border-radius: var(--radius-md);
+  background: #381f23;
+}
+
+.error-card h2 {
+  margin-top: 0;
+}
+
+.error-card p {
+  margin-bottom: 0;
+}
+
 .foundation-card {
   display: grid;
   grid-template-columns: auto 1fr;

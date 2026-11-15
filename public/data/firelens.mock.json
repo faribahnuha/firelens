@@ -1,0 +1,1305 @@
+{
+  "meta": {
+    "schema_version": "1.0.0",
+    "is_mock": true,
+    "generated_at": "2026-11-14T00:00:00Z",
+    "data_through": "2024-12",
+    "source_label": "Demonstration data — not NASA observations"
+  },
+  "region": {
+    "id": "california-demo",
+    "name": "California demonstration region",
+    "bounds": [
+      -124.48,
+      32.53,
+      -114.13,
+      42.01
+    ],
+    "grid_km": 5
+  },
+  "method": {
+    "unit": "active grid-cell day",
+    "baseline_years": [
+      2003,
+      2023
+    ],
+    "overlap_years": [
+      2012,
+      2023
+    ],
+    "confidence_filter": "Mock contract value — replace with Person A's documented filter",
+    "validation_mape": null,
+    "overlap_month_count": null
+  },
+  "months": [
+    {
+      "period": "2020-01",
+      "raw_modis_detections": 28,
+      "raw_viirs_detections": 101,
+      "modis_fau": 16,
+      "viirs_fau": 21,
+      "harmonized_fau": 21,
+      "historical_median": 26,
+      "anomaly_percent": -19.2,
+      "percentile": 38,
+      "quality": "medium",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "contracting",
+      "onset_days_difference": null,
+      "active_cells": 21,
+      "map_asset": null
+    },
+    {
+      "period": "2020-02",
+      "raw_modis_detections": 31,
+      "raw_viirs_detections": 110,
+      "modis_fau": 17,
+      "viirs_fau": 23,
+      "harmonized_fau": 23,
+      "historical_median": 24,
+      "anomaly_percent": -4.2,
+      "percentile": 47,
+      "quality": "medium",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 23,
+      "map_asset": null
+    },
+    {
+      "period": "2020-03",
+      "raw_modis_detections": 39,
+      "raw_viirs_detections": 139,
+      "modis_fau": 22,
+      "viirs_fau": 29,
+      "harmonized_fau": 29,
+      "historical_median": 28,
+      "anomaly_percent": 3.6,
+      "percentile": 52,
+      "quality": "medium",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 29,
+      "map_asset": null
+    },
+    {
+      "period": "2020-04",
+      "raw_modis_detections": 50,
+      "raw_viirs_detections": 178,
+      "modis_fau": 28,
+      "viirs_fau": 37,
+      "harmonized_fau": 37,
+      "historical_median": 34,
+      "anomaly_percent": 8.8,
+      "percentile": 56,
+      "quality": "medium",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 37,
+      "map_asset": null
+    },
+    {
+      "period": "2020-05",
+      "raw_modis_detections": 68,
+      "raw_viirs_detections": 240,
+      "modis_fau": 38,
+      "viirs_fau": 50,
+      "harmonized_fau": 50,
+      "historical_median": 46,
+      "anomaly_percent": 8.7,
+      "percentile": 56,
+      "quality": "medium",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 50,
+      "map_asset": null
+    },
+    {
+      "period": "2020-06",
+      "raw_modis_detections": 78,
+      "raw_viirs_detections": 278,
+      "modis_fau": 44,
+      "viirs_fau": 58,
+      "harmonized_fau": 58,
+      "historical_median": 71,
+      "anomaly_percent": -18.3,
+      "percentile": 38,
+      "quality": "medium",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "contracting",
+      "onset_days_difference": null,
+      "active_cells": 58,
+      "map_asset": null
+    },
+    {
+      "period": "2020-07",
+      "raw_modis_detections": 143,
+      "raw_viirs_detections": 509,
+      "modis_fau": 81,
+      "viirs_fau": 106,
+      "harmonized_fau": 106,
+      "historical_median": 126,
+      "anomaly_percent": -15.9,
+      "percentile": 40,
+      "quality": "medium",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 2,
+      "spatial_trend": "contracting",
+      "onset_days_difference": null,
+      "active_cells": 106,
+      "map_asset": null
+    },
+    {
+      "period": "2020-08",
+      "raw_modis_detections": 212,
+      "raw_viirs_detections": 754,
+      "modis_fau": 119,
+      "viirs_fau": 157,
+      "harmonized_fau": 157,
+      "historical_median": 184,
+      "anomaly_percent": -14.7,
+      "percentile": 40,
+      "quality": "medium",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 2,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 157,
+      "map_asset": null
+    },
+    {
+      "period": "2020-09",
+      "raw_modis_detections": 279,
+      "raw_viirs_detections": 994,
+      "modis_fau": 157,
+      "viirs_fau": 207,
+      "harmonized_fau": 207,
+      "historical_median": 242,
+      "anomaly_percent": -14.5,
+      "percentile": 41,
+      "quality": "medium",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 3,
+      "spatial_trend": "stable",
+      "onset_days_difference": 0,
+      "active_cells": 207,
+      "map_asset": null
+    },
+    {
+      "period": "2020-10",
+      "raw_modis_detections": 203,
+      "raw_viirs_detections": 720,
+      "modis_fau": 114,
+      "viirs_fau": 150,
+      "harmonized_fau": 150,
+      "historical_median": 168,
+      "anomaly_percent": -10.7,
+      "percentile": 43,
+      "quality": "medium",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 2,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 150,
+      "map_asset": null
+    },
+    {
+      "period": "2020-11",
+      "raw_modis_detections": 90,
+      "raw_viirs_detections": 322,
+      "modis_fau": 51,
+      "viirs_fau": 67,
+      "harmonized_fau": 67,
+      "historical_median": 82,
+      "anomaly_percent": -18.3,
+      "percentile": 38,
+      "quality": "medium",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "contracting",
+      "onset_days_difference": null,
+      "active_cells": 67,
+      "map_asset": null
+    },
+    {
+      "period": "2020-12",
+      "raw_modis_detections": 47,
+      "raw_viirs_detections": 168,
+      "modis_fau": 27,
+      "viirs_fau": 35,
+      "harmonized_fau": 35,
+      "historical_median": 39,
+      "anomaly_percent": -10.3,
+      "percentile": 43,
+      "quality": "medium",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 35,
+      "map_asset": null
+    },
+    {
+      "period": "2021-01",
+      "raw_modis_detections": 42,
+      "raw_viirs_detections": 149,
+      "modis_fau": 24,
+      "viirs_fau": 31,
+      "harmonized_fau": 31,
+      "historical_median": 26,
+      "anomaly_percent": 19.2,
+      "percentile": 62,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 31,
+      "map_asset": null
+    },
+    {
+      "period": "2021-02",
+      "raw_modis_detections": 43,
+      "raw_viirs_detections": 154,
+      "modis_fau": 24,
+      "viirs_fau": 32,
+      "harmonized_fau": 32,
+      "historical_median": 24,
+      "anomaly_percent": 33.3,
+      "percentile": 72,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 32,
+      "map_asset": null
+    },
+    {
+      "period": "2021-03",
+      "raw_modis_detections": 53,
+      "raw_viirs_detections": 187,
+      "modis_fau": 30,
+      "viirs_fau": 39,
+      "harmonized_fau": 39,
+      "historical_median": 28,
+      "anomaly_percent": 39.3,
+      "percentile": 76,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 39,
+      "map_asset": null
+    },
+    {
+      "period": "2021-04",
+      "raw_modis_detections": 66,
+      "raw_viirs_detections": 235,
+      "modis_fau": 37,
+      "viirs_fau": 49,
+      "harmonized_fau": 49,
+      "historical_median": 34,
+      "anomaly_percent": 44.1,
+      "percentile": 79,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 49,
+      "map_asset": null
+    },
+    {
+      "period": "2021-05",
+      "raw_modis_detections": 68,
+      "raw_viirs_detections": 240,
+      "modis_fau": 38,
+      "viirs_fau": 50,
+      "harmonized_fau": 50,
+      "historical_median": 46,
+      "anomaly_percent": 8.7,
+      "percentile": 56,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 50,
+      "map_asset": null
+    },
+    {
+      "period": "2021-06",
+      "raw_modis_detections": 108,
+      "raw_viirs_detections": 384,
+      "modis_fau": 61,
+      "viirs_fau": 80,
+      "harmonized_fau": 80,
+      "historical_median": 71,
+      "anomaly_percent": 12.7,
+      "percentile": 58,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 80,
+      "map_asset": null
+    },
+    {
+      "period": "2021-07",
+      "raw_modis_detections": 192,
+      "raw_viirs_detections": 682,
+      "modis_fau": 108,
+      "viirs_fau": 142,
+      "harmonized_fau": 142,
+      "historical_median": 126,
+      "anomaly_percent": 12.7,
+      "percentile": 58,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 2,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 142,
+      "map_asset": null
+    },
+    {
+      "period": "2021-08",
+      "raw_modis_detections": 281,
+      "raw_viirs_detections": 998,
+      "modis_fau": 158,
+      "viirs_fau": 208,
+      "harmonized_fau": 208,
+      "historical_median": 184,
+      "anomaly_percent": 13,
+      "percentile": 58,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 3,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 208,
+      "map_asset": null
+    },
+    {
+      "period": "2021-09",
+      "raw_modis_detections": 369,
+      "raw_viirs_detections": 1310,
+      "modis_fau": 207,
+      "viirs_fau": 273,
+      "harmonized_fau": 273,
+      "historical_median": 242,
+      "anomaly_percent": 12.8,
+      "percentile": 58,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 4,
+      "spatial_trend": "stable",
+      "onset_days_difference": 0,
+      "active_cells": 273,
+      "map_asset": null
+    },
+    {
+      "period": "2021-10",
+      "raw_modis_detections": 244,
+      "raw_viirs_detections": 869,
+      "modis_fau": 138,
+      "viirs_fau": 181,
+      "harmonized_fau": 181,
+      "historical_median": 168,
+      "anomaly_percent": 7.7,
+      "percentile": 55,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 3,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 181,
+      "map_asset": null
+    },
+    {
+      "period": "2021-11",
+      "raw_modis_detections": 124,
+      "raw_viirs_detections": 442,
+      "modis_fau": 70,
+      "viirs_fau": 92,
+      "harmonized_fau": 92,
+      "historical_median": 82,
+      "anomaly_percent": 12.2,
+      "percentile": 58,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 92,
+      "map_asset": null
+    },
+    {
+      "period": "2021-12",
+      "raw_modis_detections": 65,
+      "raw_viirs_detections": 230,
+      "modis_fau": 36,
+      "viirs_fau": 48,
+      "harmonized_fau": 48,
+      "historical_median": 39,
+      "anomaly_percent": 23.1,
+      "percentile": 65,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 48,
+      "map_asset": null
+    },
+    {
+      "period": "2022-01",
+      "raw_modis_detections": 41,
+      "raw_viirs_detections": 144,
+      "modis_fau": 23,
+      "viirs_fau": 30,
+      "harmonized_fau": 30,
+      "historical_median": 26,
+      "anomaly_percent": 15.4,
+      "percentile": 60,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 30,
+      "map_asset": null
+    },
+    {
+      "period": "2022-02",
+      "raw_modis_detections": 42,
+      "raw_viirs_detections": 149,
+      "modis_fau": 24,
+      "viirs_fau": 31,
+      "harmonized_fau": 31,
+      "historical_median": 24,
+      "anomaly_percent": 29.2,
+      "percentile": 69,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 31,
+      "map_asset": null
+    },
+    {
+      "period": "2022-03",
+      "raw_modis_detections": 51,
+      "raw_viirs_detections": 182,
+      "modis_fau": 29,
+      "viirs_fau": 38,
+      "harmonized_fau": 38,
+      "historical_median": 28,
+      "anomaly_percent": 35.7,
+      "percentile": 73,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 38,
+      "map_asset": null
+    },
+    {
+      "period": "2022-04",
+      "raw_modis_detections": 43,
+      "raw_viirs_detections": 154,
+      "modis_fau": 24,
+      "viirs_fau": 32,
+      "harmonized_fau": 32,
+      "historical_median": 34,
+      "anomaly_percent": -5.9,
+      "percentile": 46,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 32,
+      "map_asset": null
+    },
+    {
+      "period": "2022-05",
+      "raw_modis_detections": 62,
+      "raw_viirs_detections": 221,
+      "modis_fau": 35,
+      "viirs_fau": 46,
+      "harmonized_fau": 46,
+      "historical_median": 46,
+      "anomaly_percent": 0,
+      "percentile": 50,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 46,
+      "map_asset": null
+    },
+    {
+      "period": "2022-06",
+      "raw_modis_detections": 97,
+      "raw_viirs_detections": 346,
+      "modis_fau": 55,
+      "viirs_fau": 72,
+      "harmonized_fau": 72,
+      "historical_median": 71,
+      "anomaly_percent": 1.4,
+      "percentile": 51,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 72,
+      "map_asset": null
+    },
+    {
+      "period": "2022-07",
+      "raw_modis_detections": 170,
+      "raw_viirs_detections": 605,
+      "modis_fau": 96,
+      "viirs_fau": 126,
+      "harmonized_fau": 126,
+      "historical_median": 126,
+      "anomaly_percent": 0,
+      "percentile": 50,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 2,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 126,
+      "map_asset": null
+    },
+    {
+      "period": "2022-08",
+      "raw_modis_detections": 247,
+      "raw_viirs_detections": 878,
+      "modis_fau": 139,
+      "viirs_fau": 183,
+      "harmonized_fau": 183,
+      "historical_median": 184,
+      "anomaly_percent": -0.5,
+      "percentile": 50,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 3,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 183,
+      "map_asset": null
+    },
+    {
+      "period": "2022-09",
+      "raw_modis_detections": 304,
+      "raw_viirs_detections": 1080,
+      "modis_fau": 171,
+      "viirs_fau": 225,
+      "harmonized_fau": 225,
+      "historical_median": 242,
+      "anomaly_percent": -7,
+      "percentile": 45,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 3,
+      "spatial_trend": "stable",
+      "onset_days_difference": 0,
+      "active_cells": 225,
+      "map_asset": null
+    },
+    {
+      "period": "2022-10",
+      "raw_modis_detections": 215,
+      "raw_viirs_detections": 763,
+      "modis_fau": 121,
+      "viirs_fau": 159,
+      "harmonized_fau": 159,
+      "historical_median": 168,
+      "anomaly_percent": -5.4,
+      "percentile": 46,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 2,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 159,
+      "map_asset": null
+    },
+    {
+      "period": "2022-11",
+      "raw_modis_detections": 111,
+      "raw_viirs_detections": 394,
+      "modis_fau": 62,
+      "viirs_fau": 82,
+      "harmonized_fau": 82,
+      "historical_median": 82,
+      "anomaly_percent": 0,
+      "percentile": 50,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 82,
+      "map_asset": null
+    },
+    {
+      "period": "2022-12",
+      "raw_modis_detections": 61,
+      "raw_viirs_detections": 216,
+      "modis_fau": 34,
+      "viirs_fau": 45,
+      "harmonized_fau": 45,
+      "historical_median": 39,
+      "anomaly_percent": 15.4,
+      "percentile": 60,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 45,
+      "map_asset": null
+    },
+    {
+      "period": "2023-01",
+      "raw_modis_detections": 58,
+      "raw_viirs_detections": 206,
+      "modis_fau": 33,
+      "viirs_fau": 43,
+      "harmonized_fau": 43,
+      "historical_median": 26,
+      "anomaly_percent": 65.4,
+      "percentile": 93,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 43,
+      "map_asset": null
+    },
+    {
+      "period": "2023-02",
+      "raw_modis_detections": 58,
+      "raw_viirs_detections": 206,
+      "modis_fau": 33,
+      "viirs_fau": 43,
+      "harmonized_fau": 43,
+      "historical_median": 24,
+      "anomaly_percent": 79.2,
+      "percentile": 99,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 43,
+      "map_asset": null
+    },
+    {
+      "period": "2023-03",
+      "raw_modis_detections": 50,
+      "raw_viirs_detections": 178,
+      "modis_fau": 28,
+      "viirs_fau": 37,
+      "harmonized_fau": 37,
+      "historical_median": 28,
+      "anomaly_percent": 32.1,
+      "percentile": 71,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 37,
+      "map_asset": null
+    },
+    {
+      "period": "2023-04",
+      "raw_modis_detections": 65,
+      "raw_viirs_detections": 230,
+      "modis_fau": 36,
+      "viirs_fau": 48,
+      "harmonized_fau": 48,
+      "historical_median": 34,
+      "anomaly_percent": 41.2,
+      "percentile": 77,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 48,
+      "map_asset": null
+    },
+    {
+      "period": "2023-05",
+      "raw_modis_detections": 89,
+      "raw_viirs_detections": 317,
+      "modis_fau": 50,
+      "viirs_fau": 66,
+      "harmonized_fau": 66,
+      "historical_median": 46,
+      "anomaly_percent": 43.5,
+      "percentile": 78,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 66,
+      "map_asset": null
+    },
+    {
+      "period": "2023-06",
+      "raw_modis_detections": 138,
+      "raw_viirs_detections": 490,
+      "modis_fau": 78,
+      "viirs_fau": 102,
+      "harmonized_fau": 102,
+      "historical_median": 71,
+      "anomaly_percent": 43.7,
+      "percentile": 78,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 2,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 102,
+      "map_asset": null
+    },
+    {
+      "period": "2023-07",
+      "raw_modis_detections": 239,
+      "raw_viirs_detections": 850,
+      "modis_fau": 135,
+      "viirs_fau": 177,
+      "harmonized_fau": 177,
+      "historical_median": 126,
+      "anomaly_percent": 40.5,
+      "percentile": 76,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 3,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 177,
+      "map_asset": null
+    },
+    {
+      "period": "2023-08",
+      "raw_modis_detections": 325,
+      "raw_viirs_detections": 1157,
+      "modis_fau": 183,
+      "viirs_fau": 241,
+      "harmonized_fau": 241,
+      "historical_median": 184,
+      "anomaly_percent": 31,
+      "percentile": 70,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 4,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 241,
+      "map_asset": null
+    },
+    {
+      "period": "2023-09",
+      "raw_modis_detections": 432,
+      "raw_viirs_detections": 1536,
+      "modis_fau": 243,
+      "viirs_fau": 320,
+      "harmonized_fau": 320,
+      "historical_median": 242,
+      "anomaly_percent": 32.2,
+      "percentile": 71,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 8,
+      "spatial_trend": "expanding",
+      "onset_days_difference": -11,
+      "active_cells": 320,
+      "map_asset": "data/map/showcase.mock.geojson"
+    },
+    {
+      "period": "2023-10",
+      "raw_modis_detections": 305,
+      "raw_viirs_detections": 1085,
+      "modis_fau": 172,
+      "viirs_fau": 226,
+      "harmonized_fau": 226,
+      "historical_median": 168,
+      "anomaly_percent": 34.5,
+      "percentile": 72,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 3,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 226,
+      "map_asset": null
+    },
+    {
+      "period": "2023-11",
+      "raw_modis_detections": 157,
+      "raw_viirs_detections": 557,
+      "modis_fau": 88,
+      "viirs_fau": 116,
+      "harmonized_fau": 116,
+      "historical_median": 82,
+      "anomaly_percent": 41.5,
+      "percentile": 77,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 2,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 116,
+      "map_asset": null
+    },
+    {
+      "period": "2023-12",
+      "raw_modis_detections": 85,
+      "raw_viirs_detections": 302,
+      "modis_fau": 48,
+      "viirs_fau": 63,
+      "harmonized_fau": 63,
+      "historical_median": 39,
+      "anomaly_percent": 61.5,
+      "percentile": 90,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 63,
+      "map_asset": null
+    },
+    {
+      "period": "2024-01",
+      "raw_modis_detections": 57,
+      "raw_viirs_detections": 202,
+      "modis_fau": 32,
+      "viirs_fau": 42,
+      "harmonized_fau": 42,
+      "historical_median": 26,
+      "anomaly_percent": 61.5,
+      "percentile": 90,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 42,
+      "map_asset": null
+    },
+    {
+      "period": "2024-02",
+      "raw_modis_detections": 38,
+      "raw_viirs_detections": 134,
+      "modis_fau": 21,
+      "viirs_fau": 28,
+      "harmonized_fau": 28,
+      "historical_median": 24,
+      "anomaly_percent": 16.7,
+      "percentile": 61,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 28,
+      "map_asset": null
+    },
+    {
+      "period": "2024-03",
+      "raw_modis_detections": 47,
+      "raw_viirs_detections": 168,
+      "modis_fau": 27,
+      "viirs_fau": 35,
+      "harmonized_fau": 35,
+      "historical_median": 28,
+      "anomaly_percent": 25,
+      "percentile": 66,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 35,
+      "map_asset": null
+    },
+    {
+      "period": "2024-04",
+      "raw_modis_detections": 61,
+      "raw_viirs_detections": 216,
+      "modis_fau": 34,
+      "viirs_fau": 45,
+      "harmonized_fau": 45,
+      "historical_median": 34,
+      "anomaly_percent": 32.4,
+      "percentile": 71,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 45,
+      "map_asset": null
+    },
+    {
+      "period": "2024-05",
+      "raw_modis_detections": 84,
+      "raw_viirs_detections": 298,
+      "modis_fau": 47,
+      "viirs_fau": 62,
+      "harmonized_fau": 62,
+      "historical_median": 46,
+      "anomaly_percent": 34.8,
+      "percentile": 73,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 62,
+      "map_asset": null
+    },
+    {
+      "period": "2024-06",
+      "raw_modis_detections": 127,
+      "raw_viirs_detections": 451,
+      "modis_fau": 71,
+      "viirs_fau": 94,
+      "harmonized_fau": 94,
+      "historical_median": 71,
+      "anomaly_percent": 32.4,
+      "percentile": 71,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 94,
+      "map_asset": null
+    },
+    {
+      "period": "2024-07",
+      "raw_modis_detections": 197,
+      "raw_viirs_detections": 701,
+      "modis_fau": 111,
+      "viirs_fau": 146,
+      "harmonized_fau": 146,
+      "historical_median": 126,
+      "anomaly_percent": 15.9,
+      "percentile": 60,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 2,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 146,
+      "map_asset": null
+    },
+    {
+      "period": "2024-08",
+      "raw_modis_detections": 292,
+      "raw_viirs_detections": 1037,
+      "modis_fau": 164,
+      "viirs_fau": 216,
+      "harmonized_fau": 216,
+      "historical_median": 184,
+      "anomaly_percent": 17.4,
+      "percentile": 61,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 3,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 216,
+      "map_asset": null
+    },
+    {
+      "period": "2024-09",
+      "raw_modis_detections": 387,
+      "raw_viirs_detections": 1378,
+      "modis_fau": 218,
+      "viirs_fau": 287,
+      "harmonized_fau": 287,
+      "historical_median": 242,
+      "anomaly_percent": 18.6,
+      "percentile": 62,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 4,
+      "spatial_trend": "stable",
+      "onset_days_difference": -4,
+      "active_cells": 287,
+      "map_asset": null
+    },
+    {
+      "period": "2024-10",
+      "raw_modis_detections": 275,
+      "raw_viirs_detections": 979,
+      "modis_fau": 155,
+      "viirs_fau": 204,
+      "harmonized_fau": 204,
+      "historical_median": 168,
+      "anomaly_percent": 21.4,
+      "percentile": 64,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 3,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 204,
+      "map_asset": null
+    },
+    {
+      "period": "2024-11",
+      "raw_modis_detections": 144,
+      "raw_viirs_detections": 514,
+      "modis_fau": 81,
+      "viirs_fau": 107,
+      "harmonized_fau": 107,
+      "historical_median": 82,
+      "anomaly_percent": 30.5,
+      "percentile": 70,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 2,
+      "spatial_trend": "expanding",
+      "onset_days_difference": null,
+      "active_cells": 107,
+      "map_asset": null
+    },
+    {
+      "period": "2024-12",
+      "raw_modis_detections": 61,
+      "raw_viirs_detections": 216,
+      "modis_fau": 34,
+      "viirs_fau": 45,
+      "harmonized_fau": 45,
+      "historical_median": 39,
+      "anomaly_percent": 15.4,
+      "percentile": 60,
+      "quality": "high",
+      "sensors": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "persistence_days": 1,
+      "spatial_trend": "stable",
+      "onset_days_difference": null,
+      "active_cells": 45,
+      "map_asset": null
+    }
+  ],
+  "action_window": {
+    "start_mm_dd": "08-18",
+    "end_mm_dd": "09-12",
+    "median_onset_mm_dd": "08-29",
+    "selected_year": 2023,
+    "selected_onset_mm_dd": "08-18",
+    "days_from_median": -11
+  }
+}
+
