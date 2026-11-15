@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-11-15T21:13:54.271362+00:00",
+    "region_id": "california",
+    "data_available_through": "2026-10-31",
+    "uses_november_2026_observations": false,
+    "is_observed_current_activity": false,
+    "confidence_level": "low"
+  },
+  "target_month": "2026-12",
+  "model": "historical_same_month_median",
+  "predicted_fau": 427.0,
+  "heuristic_lower_bound": 0,
+  "heuristic_upper_bound": 1378.1,
+  "training_period": {
+    "start": "2000-12",
+    "end": "2026-10",
+    "december_samples": 26
+  },
+  "backtesting_method": "historical expanding-window seasonal median, 2017\u20132022 VIIRS-primary",
+  "held_out_mae_fau": 451.71527777777777,
+  "limitations": [
+    "Seasonal planning estimate, not observed December 2026 fire activity or weather-based fire forecast.",
+    "October 2026 is the information cutoff; November 2026 is excluded.",
+    "Bounds are heuristic and not statistically calibrated.",
+    "NRT and incomplete observation coverage create additional uncertainty."
+  ]
+}

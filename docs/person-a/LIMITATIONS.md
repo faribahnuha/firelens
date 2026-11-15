@@ -44,3 +44,16 @@ changes in detection characteristics, regional heterogeneity, and changing
 climate conditions. Its prediction bounds use held-out absolute errors as a
 heuristic, not statistically calibrated predictive coverage. Readiness
 categories rank the twelve forecast months against one another within the annual seasonal cycle, not against historical same-month anomaly thresholds; they are not emergency guidance.
+
+## 2023–October 2026 extension
+
+Archive and near-real-time (NRT) observations are explicitly partitioned by
+sensor and date; NRT observations may later be revised. The calibration remains
+fixed from the through-2022 overlap years; evaluation years do not refit it.
+The new monthly values reflect detected 5 km active cell-days, not independent
+fires or burned area. A month with retained detections is not necessarily
+fully observed; absent detections must not be treated as verified zeros.
+The forecast-versus-observed errors are comparisons against this imperfect
+satellite detection index, not a validated meteorological fire forecast.
+November 2026 is excluded from the completed monthly history because the
+supplied NRT files only extend through November 2.

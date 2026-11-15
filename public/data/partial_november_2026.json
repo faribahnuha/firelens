@@ -1,0 +1,19 @@
+{
+  "status": "partial_excluded",
+  "available_through": "2026-11-02",
+  "included_in_monthly_series": false,
+  "coverage_verified": false,
+  "source_nrt_raw_rows": [
+    {
+      "sensor": "MODIS",
+      "file": "fire_nrt_M-C61_851187.csv",
+      "raw_rows_nov_1_2": 5
+    },
+    {
+      "sensor": "VIIRS",
+      "file": "fire_nrt_SV-C2_851188.csv",
+      "raw_rows_nov_1_2": 48
+    }
+  ],
+  "note": "November is excluded: supplied files end November 2; do not interpret missing days as zero."
+}

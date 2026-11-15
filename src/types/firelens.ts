@@ -1,4 +1,4 @@
-export type DataQuality = "high" | "medium" | "low";
+export type DataQuality = "high" | "medium" | "low" | "provisional";
 
 export type SpatialTrend =
   | "expanding"
@@ -114,5 +114,45 @@ export interface CurrentSnapshot {
   status: "unavailable";
   reason: string;
   meta: { historical_data_through: string };
+}
+
+export interface ForecastComparison {
+  period: string;
+  predicted_fau: number;
+  observed_viirs_fau: number;
+  absolute_error_fau: number;
+  observation_source: string;
+  observation_status: string;
+}
+
+export interface ForecastEvaluation {
+  evaluation_period: string;
+  n_evaluated_months: number;
+  mae_fau: number;
+  median_absolute_error_fau: number;
+  months: ForecastComparison[];
+  limitations: string[];
+}
+
+export interface DecemberOutlook {
+  target_month: "2026-12";
+  model: string;
+  predicted_fau: number;
+  heuristic_lower_bound: number;
+  heuristic_upper_bound: number;
+  held_out_mae_fau: number;
+  meta: {
+    data_available_through: string;
+    confidence_level: string;
+    uses_november_2026_observations: false;
+  };
+  limitations: string[];
+}
+
+export interface PartialNovember {
+  status: "partial_excluded";
+  available_through: string;
+  included_in_monthly_series: false;
+  note: string;
 }
 

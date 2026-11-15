@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ActivityTimeline from "./components/ActivityTimeline";
 import ActivityMap from "./components/ActivityMap";
-import CurrentStatus from "./components/CurrentStatus";
+import ForecastPerformancePanel from "./components/ForecastPerformancePanel";
 import DataStatus from "./components/DataStatus";
 import FireRhythmCalendar from "./components/FireRhythmCalendar";
 import MetricGrid from "./components/MetricGrid";
@@ -9,20 +9,23 @@ import MethodPanel from "./components/MethodPanel";
 import OperationalBrief from "./components/OperationalBrief";
 import RegionControls from "./components/RegionControls";
 import ViewModeToggle from "./components/ViewModeToggle";
-import SeasonalOutlookPanel from "./components/SeasonalOutlookPanel";
 import { loadFireLensData } from "./data/loadFireLensData";
-import { loadCurrentSnapshot, loadSeasonalOutlook } from "./data/loadSupplementalData";
+import {
+  loadDecemberOutlook,
+  loadForecastEvaluation,
+  loadPartialNovember,
+} from "./data/loadSupplementalData";
 import { useFireLensState } from "./state/useFireLensState";
-import type { CurrentSnapshot, FireLensDataset, SeasonalOutlook } from "./types/firelens";
+import type { DecemberOutlook, FireLensDataset, ForecastEvaluation, PartialNovember } from "./types/firelens";
 import { downloadMonthlyCsv } from "./utils/csvExport";
 import { formatPeriod } from "./utils/formatters";
 
 type LoadState =
   | { status: "loading" }
-  | { status: "ready"; data: FireLensDataset; outlook: SeasonalOutlook; snapshot: CurrentSnapshot }
+  | { status: "ready"; data: FireLensDataset; evaluation: ForecastEvaluation; outlook: DecemberOutlook; partialNovember: PartialNovember }
   | { status: "error"; message: string };
 
-function Dashboard({ data, outlook, snapshot }: { data: FireLensDataset; outlook: SeasonalOutlook; snapshot: CurrentSnapshot }) {
+function Dashboard({ data, evaluation, outlook, partialNovember }: { data: FireLensDataset; evaluation: ForecastEvaluation; outlook: DecemberOutlook; partialNovember: PartialNovember }) {
   const {
     selectedPeriod,
     setSelectedPeriod,
@@ -57,10 +60,8 @@ function Dashboard({ data, outlook, snapshot }: { data: FireLensDataset; outlook
 
       <div className="map-outlook-grid">
         <ActivityMap month={selectedMonth} region={data.region} />
-        <SeasonalOutlookPanel outlook={outlook} />
+        <ForecastPerformancePanel evaluation={evaluation} outlook={outlook} partialNovember={partialNovember} />
       </div>
-
-      <CurrentStatus snapshot={snapshot} />
 
       <div className="visual-stack">
         <FireRhythmCalendar
@@ -90,10 +91,10 @@ function App() {
   useEffect(() => {
     let active = true;
 
-    Promise.all([loadFireLensData(), loadSeasonalOutlook(), loadCurrentSnapshot()])
-      .then(([data, outlook, snapshot]) => {
+    Promise.all([loadFireLensData(), loadForecastEvaluation(), loadDecemberOutlook(), loadPartialNovember()])
+      .then(([data, evaluation, outlook, partialNovember]) => {
         if (active) {
-          setLoadState({ status: "ready", data, outlook, snapshot });
+          setLoadState({ status: "ready", data, evaluation, outlook, partialNovember });
         }
       })
       .catch((error: unknown) => {
@@ -144,7 +145,7 @@ function App() {
           </section>
         )}
 
-        {loadState.status === "ready" && <Dashboard data={loadState.data} outlook={loadState.outlook} snapshot={loadState.snapshot} />}
+        {loadState.status === "ready" && <Dashboard data={loadState.data} evaluation={loadState.evaluation} outlook={loadState.outlook} partialNovember={loadState.partialNovember} />}
       </main>
     </div>
   );

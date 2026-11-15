@@ -347,6 +347,16 @@ h1 {
 .recommended-action span { color: var(--color-text-muted); font-size: 0.85rem; line-height: 1.5; }
 
 .map-outlook-grid { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 1rem; }
+.forecast-performance { min-width: 0; padding: 1.5rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
+.forecast-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; margin: 1rem 0; }
+.forecast-summary div, .december-outlook > div:not(:first-child) { display: grid; gap: 0.3rem; padding: 0.8rem; border: 1px solid var(--color-border); border-radius: 0.6rem; background: var(--color-bg); }
+.forecast-summary span, .december-outlook span { color: var(--color-text-muted); font-size: 0.7rem; }
+.forecast-chart { height: 21rem; }
+.december-outlook { display: grid; grid-template-columns: 1.4fr repeat(3, 0.7fr); gap: 0.7rem; margin-top: 1rem; }
+.december-outlook h3 { margin: 0; font-size: 1.6rem; }
+.december-outlook p:not(.section-label) { margin: 0.4rem 0 0; color: var(--color-text-muted); font-size: 0.8rem; line-height: 1.45; }
+.partial-warning { display: grid; gap: 0.25rem; margin-top: 0.8rem; padding: 0.9rem; border: 1px solid var(--color-accent); border-radius: 0.6rem; }
+.partial-warning span { color: var(--color-text-muted); font-size: 0.8rem; }
 .activity-map, .map-empty { width: 100%; height: 28rem; border-radius: 0.75rem; }
 .activity-map { background: var(--color-bg); }
 .map-empty { display: grid; place-items: center; padding: 2rem; background: var(--color-bg); color: var(--color-text-muted); text-align: center; }
@@ -603,7 +613,9 @@ td:first-child {
 
   .operational-brief,
   .map-outlook-grid,
-  .outlook-result { grid-template-columns: 1fr; }
+  .outlook-result,
+  .forecast-summary,
+  .december-outlook { grid-template-columns: 1fr; }
   .data-actions { flex-direction: column; }
   .method-panel { width: 100%; }
   .outlook-selects { width: 100%; }

@@ -4,7 +4,7 @@ import type {
   SpatialTrend,
 } from "../types/firelens";
 
-const qualities = new Set<DataQuality>(["high", "medium", "low"]);
+const qualities = new Set<DataQuality>(["high", "medium", "low", "provisional"]);
 const spatialTrends = new Set<SpatialTrend>([
   "expanding",
   "stable",

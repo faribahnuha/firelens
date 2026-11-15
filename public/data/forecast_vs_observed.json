@@ -1,0 +1,390 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-11-15T21:13:54.267850+00:00",
+    "region_id": "california",
+    "forecast_training_through": "2022-12",
+    "model": "seasonal_median",
+    "calibration_frozen_through": "2022-12",
+    "is_observed_current_activity": false
+  },
+  "evaluation_period": "2023-01 through 2026-10",
+  "n_evaluated_months": 46,
+  "mae_fau": 138.61560869565218,
+  "median_absolute_error_fau": 125.945,
+  "limitations": [
+    "Forecasts are fixed 2022-trained seasonal medians; 2023\u20132026 observations never enter training.",
+    "Observed monthly FAUs are VIIRS cell-days, not counts of individual fires.",
+    "No independent overpass/coverage validation; NRT observations are provisional.",
+    "These are forecast-versus-detection-index errors, not weather forecast skill."
+  ],
+  "months": [
+    {
+      "period": "2023-01",
+      "predicted_fau": 204.243,
+      "observed_viirs_fau": 224,
+      "absolute_error_fau": 19.757,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2023-02",
+      "predicted_fau": 374.921,
+      "observed_viirs_fau": 602,
+      "absolute_error_fau": 227.079,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2023-03",
+      "predicted_fau": 431.0,
+      "observed_viirs_fau": 226,
+      "absolute_error_fau": 205.0,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2023-04",
+      "predicted_fau": 463.372,
+      "observed_viirs_fau": 717,
+      "absolute_error_fau": 253.628,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2023-05",
+      "predicted_fau": 346.573,
+      "observed_viirs_fau": 423,
+      "absolute_error_fau": 76.427,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2023-06",
+      "predicted_fau": 379.215,
+      "observed_viirs_fau": 539,
+      "absolute_error_fau": 159.785,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2023-07",
+      "predicted_fau": 398.031,
+      "observed_viirs_fau": 376,
+      "absolute_error_fau": 22.031,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2023-08",
+      "predicted_fau": 823.314,
+      "observed_viirs_fau": 1191,
+      "absolute_error_fau": 367.686,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2023-09",
+      "predicted_fau": 749.5,
+      "observed_viirs_fau": 925,
+      "absolute_error_fau": 175.5,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2023-10",
+      "predicted_fau": 799.267,
+      "observed_viirs_fau": 1124,
+      "absolute_error_fau": 324.733,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2023-11",
+      "predicted_fau": 668,
+      "observed_viirs_fau": 948,
+      "absolute_error_fau": 280,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2023-12",
+      "predicted_fau": 420.642,
+      "observed_viirs_fau": 572,
+      "absolute_error_fau": 151.358,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2024-01",
+      "predicted_fau": 204.243,
+      "observed_viirs_fau": 341,
+      "absolute_error_fau": 136.757,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2024-02",
+      "predicted_fau": 374.921,
+      "observed_viirs_fau": 249,
+      "absolute_error_fau": 125.921,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2024-03",
+      "predicted_fau": 431.0,
+      "observed_viirs_fau": 632,
+      "absolute_error_fau": 201.0,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2024-04",
+      "predicted_fau": 463.372,
+      "observed_viirs_fau": 641,
+      "absolute_error_fau": 177.628,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2024-05",
+      "predicted_fau": 346.573,
+      "observed_viirs_fau": 520,
+      "absolute_error_fau": 173.427,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2024-06",
+      "predicted_fau": 379.215,
+      "observed_viirs_fau": 491,
+      "absolute_error_fau": 111.785,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2024-07",
+      "predicted_fau": 398.031,
+      "observed_viirs_fau": 631,
+      "absolute_error_fau": 232.969,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2024-08",
+      "predicted_fau": 823.314,
+      "observed_viirs_fau": 693,
+      "absolute_error_fau": 130.314,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2024-09",
+      "predicted_fau": 749.5,
+      "observed_viirs_fau": 658,
+      "absolute_error_fau": 91.5,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2024-10",
+      "predicted_fau": 799.267,
+      "observed_viirs_fau": 864,
+      "absolute_error_fau": 64.733,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2024-11",
+      "predicted_fau": 668,
+      "observed_viirs_fau": 674,
+      "absolute_error_fau": 6,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2024-12",
+      "predicted_fau": 420.642,
+      "observed_viirs_fau": 428,
+      "absolute_error_fau": 7.358,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2025-01",
+      "predicted_fau": 204.243,
+      "observed_viirs_fau": 818,
+      "absolute_error_fau": 613.757,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2025-02",
+      "predicted_fau": 374.921,
+      "observed_viirs_fau": 406,
+      "absolute_error_fau": 31.079,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2025-03",
+      "predicted_fau": 431.0,
+      "observed_viirs_fau": 463,
+      "absolute_error_fau": 32.0,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2025-04",
+      "predicted_fau": 463.372,
+      "observed_viirs_fau": 609,
+      "absolute_error_fau": 145.628,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2025-05",
+      "predicted_fau": 346.573,
+      "observed_viirs_fau": 401,
+      "absolute_error_fau": 54.427,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2025-06",
+      "predicted_fau": 379.215,
+      "observed_viirs_fau": 378,
+      "absolute_error_fau": 1.215,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2025-07",
+      "predicted_fau": 398.031,
+      "observed_viirs_fau": 524,
+      "absolute_error_fau": 125.969,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2025-08",
+      "predicted_fau": 823.314,
+      "observed_viirs_fau": 586,
+      "absolute_error_fau": 237.314,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2025-09",
+      "predicted_fau": 749.5,
+      "observed_viirs_fau": 686,
+      "absolute_error_fau": 63.5,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2025-10",
+      "predicted_fau": 799.267,
+      "observed_viirs_fau": 737,
+      "absolute_error_fau": 62.267,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2025-11",
+      "predicted_fau": 668,
+      "observed_viirs_fau": 576,
+      "absolute_error_fau": 92,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2025-12",
+      "predicted_fau": 420.642,
+      "observed_viirs_fau": 442,
+      "absolute_error_fau": 21.358,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2026-01",
+      "predicted_fau": 204.243,
+      "observed_viirs_fau": 437,
+      "absolute_error_fau": 232.757,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2026-02",
+      "predicted_fau": 374.921,
+      "observed_viirs_fau": 461,
+      "absolute_error_fau": 86.079,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2026-03",
+      "predicted_fau": 431.0,
+      "observed_viirs_fau": 683,
+      "absolute_error_fau": 252.0,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2026-04",
+      "predicted_fau": 463.372,
+      "observed_viirs_fau": 418,
+      "absolute_error_fau": 45.372,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2026-05",
+      "predicted_fau": 346.573,
+      "observed_viirs_fau": 456,
+      "absolute_error_fau": 109.427,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2026-06",
+      "predicted_fau": 379.215,
+      "observed_viirs_fau": 327,
+      "absolute_error_fau": 52.215,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2026-07",
+      "predicted_fau": 398.031,
+      "observed_viirs_fau": 367,
+      "absolute_error_fau": 31.031,
+      "observation_source": "VIIRS_Suomi_NPP_C2_standard",
+      "observation_status": "archive_detection_coverage_unverified"
+    },
+    {
+      "period": "2026-08",
+      "predicted_fau": 823.314,
+      "observed_viirs_fau": 818,
+      "absolute_error_fau": 5.314,
+      "observation_source": "VIIRS_Suomi_NPP_C2_NRT",
+      "observation_status": "provisional_nrt"
+    },
+    {
+      "period": "2026-09",
+      "predicted_fau": 749.5,
+      "observed_viirs_fau": 878,
+      "absolute_error_fau": 128.5,
+      "observation_source": "VIIRS_Suomi_NPP_C2_NRT",
+      "observation_status": "provisional_nrt"
+    },
+    {
+      "period": "2026-10",
+      "predicted_fau": 799.267,
+      "observed_viirs_fau": 1030,
+      "absolute_error_fau": 230.733,
+      "observation_source": "VIIRS_Suomi_NPP_C2_NRT",
+      "observation_status": "provisional_nrt"
+    }
+  ]
+}

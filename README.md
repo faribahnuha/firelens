@@ -11,7 +11,7 @@ FireLens is a static decision-support prototype for the NASA Space Apps Challeng
 - Demonstrates the sensor transition with raw and harmonized timelines.
 - Replays September 2020 as a responder-oriented historical review.
 - Maps 922 approximate activity-grid polygons for the showcase month.
-- Provides a retrospective 2023–2026 Seasonal Readiness Outlook.
+- Extends observed activity through October 2026 and compares the 2022-trained forecast with 46 later observed months.
 - Exports monthly evidence as CSV.
 - Exposes validation, uncertainty, data freshness, and limitations.
 
@@ -19,9 +19,9 @@ FireLens is a static decision-support prototype for the NASA Space Apps Challeng
 
 For California in September 2020, the processed dataset reports 6,360 harmonized Fire Activity Units, the 100th historical same-month percentile, approximately 774% above the historical September median, and 922 mapped activity cells. These are activity-index measurements, not counts of separate fires, fire perimeters, or burned area.
 
-## Seasonal outlook
+## Forecast evaluation and outlook
 
-The outlook is a retrospective planning forecast for 2023–2026 using data available through December 2022. Three season-matched models were compared with chronological backtesting. The selected seasonal-median model had a mean absolute error of approximately 452 FAUs over 72 held-out months. Confidence is **low**. August, September, and October fall in the peak-season readiness category. Monthly forecasts repeat across the four years because no post-2022 observations, weather inputs, or trend model are used.
+The seasonal-median model was frozen using history through December 2022, then tested against 46 later observed months from January 2023 through October 2026. Its out-of-sample mean absolute error is approximately 139 FAUs and median absolute error is approximately 126 FAUs. The December 2026 planning outlook predicts 427 FAUs with low confidence and a heuristic range of 0–1,378 FAUs. Partial November 2026 observations are excluded.
 
 The outlook is not observed current activity, a weather forecast, an emergency warning, evacuation guidance, or a prediction of individual fires.
 
