@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import ActivityTimeline from "./components/ActivityTimeline";
 import DataStatus from "./components/DataStatus";
+import FireRhythmCalendar from "./components/FireRhythmCalendar";
 import MetricGrid from "./components/MetricGrid";
 import RegionControls from "./components/RegionControls";
 import ViewModeToggle from "./components/ViewModeToggle";
@@ -44,14 +46,19 @@ function Dashboard({ data }: { data: FireLensDataset }) {
 
       <MetricGrid month={selectedMonth} mode={activityMode} />
 
-      <section className="dashboard-placeholder" aria-labelledby="visuals-title">
-        <p className="section-label">Next build layer</p>
-        <h2 id="visuals-title">Map and Fire Rhythm Calendar</h2>
-        <p>
-          This reserved area will connect the selected month to its spatial
-          activity and historical calendar in Step 4.
-        </p>
-      </section>
+      <div className="visual-stack">
+        <FireRhythmCalendar
+          months={data.months}
+          selectedPeriod={selectedPeriod}
+          mode={activityMode}
+          onSelect={setSelectedPeriod}
+        />
+        <ActivityTimeline
+          months={data.months}
+          selectedPeriod={selectedPeriod}
+          mode={activityMode}
+        />
+      </div>
     </>
   );
 }
