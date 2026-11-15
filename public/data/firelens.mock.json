@@ -4,7 +4,7 @@
     "is_mock": true,
     "generated_at": "2026-11-14T00:00:00Z",
     "data_through": "2024-12",
-    "source_label": "Demonstration data — not NASA observations"
+    "source": "Demonstration data — not NASA observations"
   },
   "region": {
     "id": "california-demo",

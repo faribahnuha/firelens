@@ -11,7 +11,7 @@ export interface DatasetMeta {
   is_mock: boolean;
   generated_at: string;
   data_through: string;
-  source_label: string;
+  source: string;
 }
 
 export interface FireLensRegion {
@@ -25,10 +25,10 @@ export interface FireLensRegion {
 export interface HarmonizationMethod {
   unit: "active grid-cell day";
   baseline_years: [number, number];
-  overlap_years: [number, number];
+  overlap_years: number[];
   confidence_filter: string;
   validation_mape: number | null;
-  overlap_month_count: number | null;
+  validation_held_out_months: number | null;
 }
 
 export interface FireLensMonth {
@@ -36,29 +36,29 @@ export interface FireLensMonth {
   raw_modis_detections: number;
   raw_viirs_detections: number;
   modis_fau: number;
-  viirs_fau: number;
+  viirs_fau: number | null;
   harmonized_fau: number;
-  historical_median: number;
-  anomaly_percent: number;
+  historical_median: number | null;
+  anomaly_percent: number | null;
   percentile: number;
   quality: DataQuality;
   sensors: string[];
-  persistence_days: number;
-  spatial_trend: SpatialTrend;
+  persistence_days: number | null;
+  spatial_trend: SpatialTrend | null;
   /** Negative values mean earlier than the historical median. */
   onset_days_difference: number | null;
-  active_cells: number;
+  active_cells: number | null;
   map_asset: string | null;
 }
 
 export interface HistoricalActionWindow {
-  start_mm_dd: string;
-  end_mm_dd: string;
-  median_onset_mm_dd: string;
-  selected_year: number | null;
-  selected_onset_mm_dd: string | null;
+  start_mm_dd: string | null;
+  end_mm_dd: string | null;
+  median_onset_mm_dd: string | null;
+  selected_year?: number | null;
+  selected_onset_mm_dd?: string | null;
   /** Negative values mean earlier than the historical median. */
-  days_from_median: number | null;
+  days_from_median?: number | null;
 }
 
 export interface FireLensDataset {

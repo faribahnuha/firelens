@@ -1,0 +1,248 @@
+{
+  "region_id": "california",
+  "month": "2020-09",
+  "daily": [
+    {
+      "date": "2020-09-01",
+      "active_cells": 147,
+      "newly_active_cells": 147,
+      "active_cells_adjacent_to_previous_day": 0,
+      "change_in_active_cells": null,
+      "expansion_two_day_increase": false
+    },
+    {
+      "date": "2020-09-02",
+      "active_cells": 139,
+      "newly_active_cells": 26,
+      "active_cells_adjacent_to_previous_day": 136,
+      "change_in_active_cells": -8,
+      "expansion_two_day_increase": false
+    },
+    {
+      "date": "2020-09-03",
+      "active_cells": 143,
+      "newly_active_cells": 22,
+      "active_cells_adjacent_to_previous_day": 135,
+      "change_in_active_cells": 4,
+      "expansion_two_day_increase": false
+    },
+    {
+      "date": "2020-09-04",
+      "active_cells": 136,
+      "newly_active_cells": 19,
+      "active_cells_adjacent_to_previous_day": 131,
+      "change_in_active_cells": -7,
+      "expansion_two_day_increase": false
+    },
+    {
+      "date": "2020-09-05",
+      "active_cells": 157,
+      "newly_active_cells": 43,
+      "active_cells_adjacent_to_previous_day": 135,
+      "change_in_active_cells": 21,
+      "expansion_two_day_increase": false
+    },
+    {
+      "date": "2020-09-06",
+      "active_cells": 194,
+      "newly_active_cells": 61,
+      "active_cells_adjacent_to_previous_day": 160,
+      "change_in_active_cells": 37,
+      "expansion_two_day_increase": true
+    },
+    {
+      "date": "2020-09-07",
+      "active_cells": 216,
+      "newly_active_cells": 60,
+      "active_cells_adjacent_to_previous_day": 198,
+      "change_in_active_cells": 22,
+      "expansion_two_day_increase": true
+    },
+    {
+      "date": "2020-09-08",
+      "active_cells": 294,
+      "newly_active_cells": 119,
+      "active_cells_adjacent_to_previous_day": 245,
+      "change_in_active_cells": 78,
+      "expansion_two_day_increase": true
+    },
+    {
+      "date": "2020-09-09",
+      "active_cells": 389,
+      "newly_active_cells": 139,
+      "active_cells_adjacent_to_previous_day": 317,
+      "change_in_active_cells": 95,
+      "expansion_two_day_increase": true
+    },
+    {
+      "date": "2020-09-10",
+      "active_cells": 346,
+      "newly_active_cells": 31,
+      "active_cells_adjacent_to_previous_day": 342,
+      "change_in_active_cells": -43,
+      "expansion_two_day_increase": false
+    },
+    {
+      "date": "2020-09-11",
+      "active_cells": 327,
+      "newly_active_cells": 42,
+      "active_cells_adjacent_to_previous_day": 314,
+      "change_in_active_cells": -19,
+      "expansion_two_day_increase": false
+    },
+    {
+      "date": "2020-09-12",
+      "active_cells": 293,
+      "newly_active_cells": 41,
+      "active_cells_adjacent_to_previous_day": 284,
+      "change_in_active_cells": -34,
+      "expansion_two_day_increase": false
+    },
+    {
+      "date": "2020-09-13",
+      "active_cells": 302,
+      "newly_active_cells": 60,
+      "active_cells_adjacent_to_previous_day": 295,
+      "change_in_active_cells": 9,
+      "expansion_two_day_increase": false
+    },
+    {
+      "date": "2020-09-14",
+      "active_cells": 291,
+      "newly_active_cells": 56,
+      "active_cells_adjacent_to_previous_day": 282,
+      "change_in_active_cells": -11,
+      "expansion_two_day_increase": false
+    },
+    {
+      "date": "2020-09-15",
+      "active_cells": 300,
+      "newly_active_cells": 51,
+      "active_cells_adjacent_to_previous_day": 292,
+      "change_in_active_cells": 9,
+      "expansion_two_day_increase": false
+    },
+    {
+      "date": "2020-09-16",
+      "active_cells": 298,
+      "newly_active_cells": 39,
+      "active_cells_adjacent_to_previous_day": 293,
+      "change_in_active_cells": -2,
+      "expansion_two_day_increase": false
+    },
+    {
+      "date": "2020-09-17",
+      "active_cells": 253,
+      "newly_active_cells": 29,
+      "active_cells_adjacent_to_previous_day": 242,
+      "change_in_active_cells": -45,
+      "expansion_two_day_increase": false
+    },
+    {
+      "date": "2020-09-18",
+      "active_cells": 158,
+      "newly_active_cells": 35,
+      "active_cells_adjacent_to_previous_day": 148,
+      "change_in_active_cells": -95,
+      "expansion_two_day_increase": false
+    },
+    {
+      "date": "2020-09-19",
+      "active_cells": 193,
+      "newly_active_cells": 78,
+      "active_cells_adjacent_to_previous_day": 141,
+      "change_in_active_cells": 35,
+      "expansion_two_day_increase": false
+    },
+    {
+      "date": "2020-09-20",
+      "active_cells": 216,
+      "newly_active_cells": 60,
+      "active_cells_adjacent_to_previous_day": 205,
+      "change_in_active_cells": 23,
+      "expansion_two_day_increase": true
+    },
+    {
+      "date": "2020-09-21",
+      "active_cells": 227,
+      "newly_active_cells": 48,
+      "active_cells_adjacent_to_previous_day": 217,
+      "change_in_active_cells": 11,
+      "expansion_two_day_increase": true
+    },
+    {
+      "date": "2020-09-22",
+      "active_cells": 222,
+      "newly_active_cells": 35,
+      "active_cells_adjacent_to_previous_day": 214,
+      "change_in_active_cells": -5,
+      "expansion_two_day_increase": false
+    },
+    {
+      "date": "2020-09-23",
+      "active_cells": 204,
+      "newly_active_cells": 25,
+      "active_cells_adjacent_to_previous_day": 192,
+      "change_in_active_cells": -18,
+      "expansion_two_day_increase": false
+    },
+    {
+      "date": "2020-09-24",
+      "active_cells": 144,
+      "newly_active_cells": 21,
+      "active_cells_adjacent_to_previous_day": 134,
+      "change_in_active_cells": -60,
+      "expansion_two_day_increase": false
+    },
+    {
+      "date": "2020-09-25",
+      "active_cells": 125,
+      "newly_active_cells": 31,
+      "active_cells_adjacent_to_previous_day": 114,
+      "change_in_active_cells": -19,
+      "expansion_two_day_increase": false
+    },
+    {
+      "date": "2020-09-26",
+      "active_cells": 133,
+      "newly_active_cells": 30,
+      "active_cells_adjacent_to_previous_day": 119,
+      "change_in_active_cells": 8,
+      "expansion_two_day_increase": false
+    },
+    {
+      "date": "2020-09-27",
+      "active_cells": 185,
+      "newly_active_cells": 71,
+      "active_cells_adjacent_to_previous_day": 155,
+      "change_in_active_cells": 52,
+      "expansion_two_day_increase": true
+    },
+    {
+      "date": "2020-09-28",
+      "active_cells": 235,
+      "newly_active_cells": 95,
+      "active_cells_adjacent_to_previous_day": 187,
+      "change_in_active_cells": 50,
+      "expansion_two_day_increase": true
+    },
+    {
+      "date": "2020-09-29",
+      "active_cells": 199,
+      "newly_active_cells": 33,
+      "active_cells_adjacent_to_previous_day": 189,
+      "change_in_active_cells": -36,
+      "expansion_two_day_increase": false
+    },
+    {
+      "date": "2020-09-30",
+      "active_cells": 184,
+      "newly_active_cells": 36,
+      "active_cells_adjacent_to_previous_day": 176,
+      "change_in_active_cells": -15,
+      "expansion_two_day_increase": false
+    }
+  ],
+  "spatial_expansion_rule": "active cell count rises on two consecutive UTC-day transitions; adjacent-to-prior-day count also provided",
+  "caveat": "This is expansion of detected grid-cell activity, not mapped fire perimeters or burned area."
+}

@@ -42,4 +42,10 @@ describe("createDashboardMetrics", () => {
     const metrics = createDashboardMetrics(month, "harmonized");
     expect(metrics[3].value).toBe("11 days early");
   });
+
+  it("shows unavailable instead of inventing persistence", () => {
+    const withoutPersistence = { ...month, persistence_days: null };
+    const metrics = createDashboardMetrics(withoutPersistence, "harmonized");
+    expect(metrics[2].value).toBe("Unavailable");
+  });
 });

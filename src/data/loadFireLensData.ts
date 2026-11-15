@@ -1,11 +1,11 @@
 import type { FireLensDataset } from "../types/firelens";
 import { validateFireLensData } from "./validateFireLensData";
 
-const mockDatasetPath = "data/firelens.mock.json";
+const datasetPath = "data/firelens.json";
 
 export async function loadFireLensData(): Promise<FireLensDataset> {
   const response = await fetch(
-    `${import.meta.env.BASE_URL}${mockDatasetPath}`,
+    `${import.meta.env.BASE_URL}${datasetPath}`,
   );
 
   if (!response.ok) {

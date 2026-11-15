@@ -17,7 +17,7 @@ function DataStatus({ meta }: DataStatusProps) {
         <strong>
           {meta.is_mock ? "Demonstration data" : "Processed NASA data"}
         </strong>
-        <span>{meta.source_label}</span>
+        <span>{meta.source}</span>
       </div>
     </aside>
   );

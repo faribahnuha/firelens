@@ -7,7 +7,7 @@ const validDataset = {
     is_mock: true,
     generated_at: "2026-11-14T00:00:00Z",
     data_through: "2024-12",
-    source_label: "Test fixture",
+    source: "Test fixture",
   },
   region: {
     id: "test",
@@ -18,10 +18,10 @@ const validDataset = {
   method: {
     unit: "active grid-cell day",
     baseline_years: [2003, 2023],
-    overlap_years: [2012, 2023],
+    overlap_years: [2012, 2013, 2014, 2023],
     confidence_filter: "Test filter",
     validation_mape: null,
-    overlap_month_count: null,
+    validation_held_out_months: null,
   },
   months: [
     {

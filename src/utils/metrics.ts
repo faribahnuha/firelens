@@ -45,15 +45,27 @@ export function createDashboardMetrics(
       id: "percentile",
       label: "Historical percentile",
       value: ordinal(month.percentile),
-      detail: `${month.anomaly_percent >= 0 ? "+" : ""}${month.anomaly_percent.toFixed(1)}% vs. same-month median`,
+      detail:
+        month.anomaly_percent === null
+          ? "Same-month anomaly unavailable"
+          : `${month.anomaly_percent >= 0 ? "+" : ""}${month.anomaly_percent.toFixed(1)}% vs. same-month median`,
       tone: percentileTone(month.percentile),
     },
     {
       id: "persistence",
       label: "Persistence",
-      value: `${formatInteger(month.persistence_days)} ${month.persistence_days === 1 ? "day" : "days"}`,
-      detail: `${month.spatial_trend} spatial pattern`,
-      tone: month.persistence_days >= 3 ? "attention" : "neutral",
+      value:
+        month.persistence_days === null
+          ? "Unavailable"
+          : `${formatInteger(month.persistence_days)} ${month.persistence_days === 1 ? "day" : "days"}`,
+      detail:
+        month.spatial_trend === null
+          ? "Daily persistence not exported"
+          : `${month.spatial_trend} spatial pattern`,
+      tone:
+        month.persistence_days !== null && month.persistence_days >= 3
+          ? "attention"
+          : "neutral",
     },
     {
       id: "onset",

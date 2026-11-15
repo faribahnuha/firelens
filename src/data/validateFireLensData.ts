@@ -54,14 +54,13 @@ function requireInteger(value: unknown, path: string): number {
   return number;
 }
 
-function requireNumberPair(value: unknown, path: string): [number, number] {
-  if (!Array.isArray(value) || value.length !== 2) {
-    throw new Error(`${path} must contain exactly two numbers.`);
+function requireNumberArray(value: unknown, path: string): number[] {
+  if (!Array.isArray(value) || value.length === 0) {
+    throw new Error(`${path} must contain at least one number.`);
   }
-  return [
-    requireFiniteNumber(value[0], `${path}[0]`),
-    requireFiniteNumber(value[1], `${path}[1]`),
-  ];
+  return value.map((entry, index) =>
+    requireFiniteNumber(entry, `${path}[${index}]`),
+  );
 }
 
 function requireMonthDay(value: unknown, path: string): string {
@@ -87,7 +86,7 @@ export function validateFireLensData(value: unknown): FireLensDataset {
   }
   requireString(meta.generated_at, "meta.generated_at");
   requireString(meta.data_through, "meta.data_through");
-  requireString(meta.source_label, "meta.source_label");
+  requireString(meta.source, "meta.source");
 
   requireString(region.id, "region.id");
   requireString(region.name, "region.name");
@@ -109,12 +108,15 @@ export function validateFireLensData(value: unknown): FireLensDataset {
   if (method.unit !== "active grid-cell day") {
     throw new Error('method.unit must be "active grid-cell day".');
   }
-  requireNumberPair(method.baseline_years, "method.baseline_years");
-  requireNumberPair(method.overlap_years, "method.overlap_years");
+  requireNumberArray(method.baseline_years, "method.baseline_years");
+  requireNumberArray(method.overlap_years, "method.overlap_years");
   requireString(method.confidence_filter, "method.confidence_filter");
   requireNullableNumber(method.validation_mape, "method.validation_mape");
-  if (method.overlap_month_count !== null) {
-    requireInteger(method.overlap_month_count, "method.overlap_month_count");
+  if (method.validation_held_out_months !== null) {
+    requireInteger(
+      method.validation_held_out_months,
+      "method.validation_held_out_months",
+    );
   }
 
   if (!Array.isArray(root.months) || root.months.length === 0) {
@@ -137,11 +139,7 @@ export function validateFireLensData(value: unknown): FireLensDataset {
       "raw_modis_detections",
       "raw_viirs_detections",
       "modis_fau",
-      "viirs_fau",
       "harmonized_fau",
-      "historical_median",
-      "active_cells",
-      "persistence_days",
     ].forEach((field) => {
       const number = requireFiniteNumber(
         month[field],
@@ -152,7 +150,19 @@ export function validateFireLensData(value: unknown): FireLensDataset {
       }
     });
 
-    requireFiniteNumber(
+    ["viirs_fau", "historical_median", "active_cells", "persistence_days"].forEach(
+      (field) => {
+        const number = requireNullableNumber(
+          month[field],
+          `months[${index}].${field}`,
+        );
+        if (number !== null && number < 0) {
+          throw new Error(`months[${index}].${field} cannot be negative.`);
+        }
+      },
+    );
+
+    requireNullableNumber(
       month.anomaly_percent,
       `months[${index}].anomaly_percent`,
     );
@@ -172,7 +182,10 @@ export function validateFireLensData(value: unknown): FireLensDataset {
     ) {
       throw new Error(`months[${index}].sensors must be strings.`);
     }
-    if (!spatialTrends.has(month.spatial_trend as SpatialTrend)) {
+    if (
+      month.spatial_trend !== null &&
+      !spatialTrends.has(month.spatial_trend as SpatialTrend)
+    ) {
       throw new Error(`months[${index}].spatial_trend is invalid.`);
     }
     requireNullableNumber(
@@ -184,25 +197,39 @@ export function validateFireLensData(value: unknown): FireLensDataset {
     }
   });
 
-  requireMonthDay(actionWindow.start_mm_dd, "action_window.start_mm_dd");
-  requireMonthDay(actionWindow.end_mm_dd, "action_window.end_mm_dd");
-  requireMonthDay(
-    actionWindow.median_onset_mm_dd,
-    "action_window.median_onset_mm_dd",
-  );
-  if (actionWindow.selected_year !== null) {
+  if (actionWindow.start_mm_dd !== null) {
+    requireMonthDay(actionWindow.start_mm_dd, "action_window.start_mm_dd");
+  }
+  if (actionWindow.end_mm_dd !== null) {
+    requireMonthDay(actionWindow.end_mm_dd, "action_window.end_mm_dd");
+  }
+  if (actionWindow.median_onset_mm_dd !== null) {
+    requireMonthDay(
+      actionWindow.median_onset_mm_dd,
+      "action_window.median_onset_mm_dd",
+    );
+  }
+  if (
+    actionWindow.selected_year !== undefined &&
+    actionWindow.selected_year !== null
+  ) {
     requireInteger(actionWindow.selected_year, "action_window.selected_year");
   }
-  if (actionWindow.selected_onset_mm_dd !== null) {
+  if (
+    actionWindow.selected_onset_mm_dd !== undefined &&
+    actionWindow.selected_onset_mm_dd !== null
+  ) {
     requireMonthDay(
       actionWindow.selected_onset_mm_dd,
       "action_window.selected_onset_mm_dd",
     );
   }
-  requireNullableNumber(
-    actionWindow.days_from_median,
-    "action_window.days_from_median",
-  );
+  if (actionWindow.days_from_median !== undefined) {
+    requireNullableNumber(
+      actionWindow.days_from_median,
+      "action_window.days_from_median",
+    );
+  }
 
   return value as FireLensDataset;
 }
