@@ -87,7 +87,7 @@ a {
 }
 
 .foundation {
-  width: min(calc(100% - 2rem), 62rem);
+  width: min(calc(100% - 2rem), var(--content-width));
   margin: 0 auto;
   padding: clamp(4rem, 9vw, 8rem) 0;
 }
@@ -159,6 +159,179 @@ h1 {
   color: var(--color-accent-dark);
 }
 
+.dashboard-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 3rem 0 1rem;
+}
+
+.dashboard-heading h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  letter-spacing: -0.04em;
+}
+
+.dashboard-heading p:not(.section-label) {
+  margin: 0.35rem 0 0;
+  color: var(--color-text-muted);
+}
+
+.section-label {
+  margin: 0 0 0.45rem;
+  color: var(--color-accent);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.mode-toggle {
+  min-width: min(100%, 31rem);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.mode-toggle legend {
+  margin-bottom: 0.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.mode-toggle div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  background: var(--color-surface);
+}
+
+.mode-toggle button {
+  padding: 0.7rem 0.9rem;
+  border: 0;
+  border-radius: 0.55rem;
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-weight: 720;
+}
+
+.mode-toggle button[aria-pressed="true"] {
+  background: var(--color-accent);
+  color: var(--color-accent-dark);
+}
+
+.mode-toggle p {
+  max-width: 30rem;
+  margin: 0.55rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.control-panel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.field {
+  display: grid;
+  gap: 0.45rem;
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.field select {
+  width: 100%;
+  min-height: 2.85rem;
+  padding: 0 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.55rem;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.field select:disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+
+.field small {
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.metric-card {
+  min-height: 10rem;
+  padding: 1.25rem;
+  border: 1px solid var(--color-border);
+  border-top: 0.25rem solid var(--color-focus);
+  border-radius: var(--radius-md);
+  background: linear-gradient(150deg, var(--color-surface-raised), var(--color-surface));
+}
+
+.metric-card--attention {
+  border-top-color: var(--color-accent);
+}
+
+.metric-card p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+.metric-card strong {
+  display: block;
+  margin: 1.25rem 0 0.4rem;
+  font-size: clamp(1.55rem, 3vw, 2.25rem);
+  letter-spacing: -0.035em;
+}
+
+.metric-card span {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.dashboard-placeholder {
+  min-height: 17rem;
+  margin-top: 1rem;
+  padding: 2rem;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  background: rgb(12 36 48 / 52%);
+}
+
+.dashboard-placeholder h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2.3rem);
+}
+
+.dashboard-placeholder > p:last-child {
+  max-width: 40rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
+
 .loading-message {
   color: var(--color-text-muted);
 }
@@ -220,6 +393,22 @@ h1 {
 
   .foundation-card {
     grid-template-columns: 1fr;
+  }
+
+  .dashboard-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .control-panel,
+  .metric-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 38.01rem) and (max-width: 62rem) {
+  .metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

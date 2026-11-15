@@ -1,12 +1,60 @@
 import { useEffect, useState } from "react";
 import DataStatus from "./components/DataStatus";
+import MetricGrid from "./components/MetricGrid";
+import RegionControls from "./components/RegionControls";
+import ViewModeToggle from "./components/ViewModeToggle";
 import { loadFireLensData } from "./data/loadFireLensData";
+import { useFireLensState } from "./state/useFireLensState";
 import type { FireLensDataset } from "./types/firelens";
+import { formatPeriod } from "./utils/formatters";
 
 type LoadState =
   | { status: "loading" }
   | { status: "ready"; data: FireLensDataset }
   | { status: "error"; message: string };
+
+function Dashboard({ data }: { data: FireLensDataset }) {
+  const {
+    selectedPeriod,
+    setSelectedPeriod,
+    selectedMonth,
+    activityMode,
+    setActivityMode,
+  } = useFireLensState(data);
+
+  return (
+    <>
+      <DataStatus meta={data.meta} />
+
+      <div className="dashboard-heading">
+        <div>
+          <p className="section-label">Selected view</p>
+          <h2>{formatPeriod(selectedMonth.period)}</h2>
+          <p>{data.region.name}</p>
+        </div>
+        <ViewModeToggle mode={activityMode} onChange={setActivityMode} />
+      </div>
+
+      <RegionControls
+        region={data.region}
+        months={data.months}
+        selectedPeriod={selectedPeriod}
+        onPeriodChange={setSelectedPeriod}
+      />
+
+      <MetricGrid month={selectedMonth} mode={activityMode} />
+
+      <section className="dashboard-placeholder" aria-labelledby="visuals-title">
+        <p className="section-label">Next build layer</p>
+        <h2 id="visuals-title">Map and Fire Rhythm Calendar</h2>
+        <p>
+          This reserved area will connect the selected month to its spatial
+          activity and historical calendar in Step 4.
+        </p>
+      </section>
+    </>
+  );
+}
 
 function App() {
   const [loadState, setLoadState] = useState<LoadState>({ status: "loading" });
@@ -46,12 +94,13 @@ function App() {
       </header>
 
       <main id="main-content" className="foundation" tabIndex={-1}>
-        <p className="eyebrow">NASA Space Apps Challenge · Step 2</p>
+        <p className="eyebrow">NASA Space Apps Challenge · Interactive prototype</p>
         <h1>One fire history. Any satellite. Clearer decisions.</h1>
         <p className="intro">
           FireLens will transform MODIS and VIIRS hotspot observations into a
-          comparable burning-activity calendar. The shared data contract is now
-          versioned, validated, and ready for Person A's pipeline output.
+          comparable burning-activity calendar. Compare the corrected history
+          with raw satellite detections and inspect the evidence behind each
+          selected month.
         </p>
 
         {loadState.status === "loading" && (
@@ -67,25 +116,7 @@ function App() {
           </section>
         )}
 
-        {loadState.status === "ready" && (
-          <>
-            <DataStatus meta={loadState.data.meta} />
-            <section
-              className="foundation-card"
-              aria-labelledby="next-step-title"
-            >
-              <span className="step-number" aria-hidden="true">02</span>
-              <div>
-                <h2 id="next-step-title">Data contract validated</h2>
-                <p>
-                  {loadState.data.months.length} monthly records loaded for{" "}
-                  {loadState.data.region.name}. The dashboard will consume this
-                  same structure when real NASA-derived data arrives.
-                </p>
-              </div>
-            </section>
-          </>
-        )}
+        {loadState.status === "ready" && <Dashboard data={loadState.data} />}
       </main>
     </div>
   );
