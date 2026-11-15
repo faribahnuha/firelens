@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "schema_version": "1.0.0",
+    "is_mock": false,
+    "generated_at": "2026-11-15T05:39:08.179221Z",
+    "source": "NASA FIRMS/LANCE MODIS Collection 6.1 and VIIRS Suomi-NPP Collection 2 active-fire archives",
+    "source_versions": {
+      "MODIS": "Collection 6.1",
+      "VIIRS_Suomi_NPP": "Collection 2"
+    },
+    "source_files": [
+      "fire_archive_M-C61_850310.csv",
+      "fire_archive_SV-C2_850301.csv"
+    ],
+    "historical_data_through": "2022-12"
+  },
+  "region": {
+    "id": "california",
+    "name": "California",
+    "bounds": [
+      -124.48,
+      32.53,
+      -114.13,
+      42.01
+    ],
+    "grid_km": 5
+  },
+  "method": {
+    "unit": "active grid-cell day",
+    "grid_km": 5,
+    "utc_day": true,
+    "comparison": "same-calendar-season historical harmonized FAUs"
+  },
+  "observation_date_range": {
+    "start": null,
+    "end": null
+  },
+  "active_cells": null,
+  "historical_seasonal_percentile": null,
+  "anomaly_percent": null,
+  "data_quality": "unavailable",
+  "map_asset": null,
+  "status": "unavailable",
+  "reason": "No independently verified recent, complete MODIS/VIIRS observation window or coverage evidence was supplied. Historical archive data must not be presented as a current snapshot; no current comparison was calculated."
+}

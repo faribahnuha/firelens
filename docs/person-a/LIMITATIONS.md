@@ -26,3 +26,19 @@ The showcase_cell_days.json asset contains 5-km projected cell indices, sensor-s
 - A daily increase in active cells or an adjacent active cell is a **thermal-detection activity pattern**, not evidence of the physical spread of an individual wildfire.
 - Provisional onset dates are derived from detections, not independently verified satellite observation coverage. The main JSON contract intentionally leaves `action_window` null.
 - The validation metric is conditional on retained detection-positive overlap months; it does not quantify uncertainty from undetected activity or missing observation coverage.
+
+## Optional current snapshot
+
+The optional `current_snapshot.json` is a machine-readable **unavailable** status, not a current scientific finding. No near-real-time observation window, independent coverage confirmation, or current seasonal comparison was provided. Its scientific metrics and map path are intentionally null; the generated timestamp records file creation, not satellite acquisition.
+
+### Seasonal outlook export
+
+`seasonal_outlook.json` is a retrospective, as-of-2022 projection for 2023,
+not observed current activity or a live forecast. The backtest evaluates
+season-matched methods only on VIIRS-primary months, because the older MODIS
+harmonized values use calibration factors estimated using later overlap years.
+The seasonal forecast can still be biased by unverified satellite coverage,
+changes in detection characteristics, regional heterogeneity, and changing
+climate conditions. Its prediction bounds use held-out absolute errors as a
+heuristic, not statistically calibrated predictive coverage. Readiness
+categories rank the twelve forecast months against one another within the annual seasonal cycle, not against historical same-month anomaly thresholds; they are not emergency guidance.

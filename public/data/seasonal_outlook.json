@@ -1,0 +1,240 @@
+{
+  "meta": {
+    "schema_version": "1.0.0",
+    "is_mock": false,
+    "generated_at_utc": "2026-11-15T05:59:59.810491+00:00",
+    "data_through": "2022-12",
+    "source": "NASA FIRMS/LANCE MODIS Collection 6.1 and VIIRS Suomi-NPP Collection 2 active-fire archives",
+    "source_versions": {
+      "MODIS": "Collection 6.1",
+      "VIIRS_Suomi_NPP": "Collection 2"
+    },
+    "product_type": "retrospective_seasonal_outlook",
+    "is_observed_current_activity": false,
+    "uses_2026_observations": false
+  },
+  "region": {
+    "id": "california",
+    "name": "California",
+    "bounds": [
+      -124.48,
+      32.53,
+      -114.13,
+      42.01
+    ],
+    "grid_km": 5
+  },
+  "forecast_method": "seasonal_median",
+  "baseline_method": "previous_year_same_month",
+  "model_selection": {
+    "criterion": "lowest chronological backtest MAE (FAU)",
+    "compared_models": {
+      "seasonal_median": {
+        "mae_fau": 451.71527777777777,
+        "median_absolute_error_fau": 172.75,
+        "n_held_out_months": 72
+      },
+      "recent_same_month_median": {
+        "mae_fau": 453.9166666666667,
+        "median_absolute_error_fau": 179.5,
+        "n_held_out_months": 72
+      },
+      "previous_year_same_month": {
+        "mae_fau": 583.75,
+        "median_absolute_error_fau": 179.5,
+        "n_held_out_months": 72
+      }
+    }
+  },
+  "backtesting_method": "expanding-window, one-month-ahead same-calendar-month hindcasts, 2017\u20132022; VIIRS-primary only; all training periods precede targets",
+  "held_out_error": {
+    "metric": "mean absolute error",
+    "value_fau": 451.71527777777777,
+    "held_out_months": 72
+  },
+  "prediction_bounds_method": "point estimate +/- empirical 90th percentile of held-out absolute errors, truncated at zero; heuristic, not guaranteed 90% coverage",
+  "readiness_threshold": "Midrank percentile among the 12 forecast monthly FAU values: <25 routine_readiness, 25\u2013<75 elevated_readiness, >=75 peak_season_readiness; ties share a rank. Categories describe the annual seasonal cycle, not anomalies or emergency warnings",
+  "confidence_level": "low",
+  "forecasts": [
+    {
+      "target_month": "2023-01",
+      "predicted_fau": 204.243,
+      "lower_prediction_bound": 0,
+      "upper_prediction_bound": 1155.343,
+      "readiness_category": "routine_readiness",
+      "seasonal_rank_percentile": 4.167,
+      "confidence_level": "low",
+      "training_period": {
+        "start": "2000-11",
+        "end": "2022-12",
+        "same_month_samples": 22
+      }
+    },
+    {
+      "target_month": "2023-02",
+      "predicted_fau": 374.921,
+      "lower_prediction_bound": 0,
+      "upper_prediction_bound": 1326.021,
+      "readiness_category": "routine_readiness",
+      "seasonal_rank_percentile": 20.833,
+      "confidence_level": "low",
+      "training_period": {
+        "start": "2000-11",
+        "end": "2022-12",
+        "same_month_samples": 22
+      }
+    },
+    {
+      "target_month": "2023-03",
+      "predicted_fau": 431.0,
+      "lower_prediction_bound": 0,
+      "upper_prediction_bound": 1382.1,
+      "readiness_category": "elevated_readiness",
+      "seasonal_rank_percentile": 54.167,
+      "confidence_level": "low",
+      "training_period": {
+        "start": "2000-11",
+        "end": "2022-12",
+        "same_month_samples": 22
+      }
+    },
+    {
+      "target_month": "2023-04",
+      "predicted_fau": 463.372,
+      "lower_prediction_bound": 0,
+      "upper_prediction_bound": 1414.472,
+      "readiness_category": "elevated_readiness",
+      "seasonal_rank_percentile": 62.5,
+      "confidence_level": "low",
+      "training_period": {
+        "start": "2000-11",
+        "end": "2022-12",
+        "same_month_samples": 22
+      }
+    },
+    {
+      "target_month": "2023-05",
+      "predicted_fau": 346.573,
+      "lower_prediction_bound": 0,
+      "upper_prediction_bound": 1297.673,
+      "readiness_category": "routine_readiness",
+      "seasonal_rank_percentile": 12.5,
+      "confidence_level": "low",
+      "training_period": {
+        "start": "2000-11",
+        "end": "2022-12",
+        "same_month_samples": 22
+      }
+    },
+    {
+      "target_month": "2023-06",
+      "predicted_fau": 379.215,
+      "lower_prediction_bound": 0,
+      "upper_prediction_bound": 1330.315,
+      "readiness_category": "elevated_readiness",
+      "seasonal_rank_percentile": 29.167,
+      "confidence_level": "low",
+      "training_period": {
+        "start": "2000-11",
+        "end": "2022-12",
+        "same_month_samples": 22
+      }
+    },
+    {
+      "target_month": "2023-07",
+      "predicted_fau": 398.031,
+      "lower_prediction_bound": 0,
+      "upper_prediction_bound": 1349.131,
+      "readiness_category": "elevated_readiness",
+      "seasonal_rank_percentile": 37.5,
+      "confidence_level": "low",
+      "training_period": {
+        "start": "2000-11",
+        "end": "2022-12",
+        "same_month_samples": 22
+      }
+    },
+    {
+      "target_month": "2023-08",
+      "predicted_fau": 823.314,
+      "lower_prediction_bound": 0,
+      "upper_prediction_bound": 1774.414,
+      "readiness_category": "peak_season_readiness",
+      "seasonal_rank_percentile": 95.833,
+      "confidence_level": "low",
+      "training_period": {
+        "start": "2000-11",
+        "end": "2022-12",
+        "same_month_samples": 22
+      }
+    },
+    {
+      "target_month": "2023-09",
+      "predicted_fau": 749.5,
+      "lower_prediction_bound": 0,
+      "upper_prediction_bound": 1700.6,
+      "readiness_category": "peak_season_readiness",
+      "seasonal_rank_percentile": 79.167,
+      "confidence_level": "low",
+      "training_period": {
+        "start": "2000-11",
+        "end": "2022-12",
+        "same_month_samples": 22
+      }
+    },
+    {
+      "target_month": "2023-10",
+      "predicted_fau": 799.267,
+      "lower_prediction_bound": 0,
+      "upper_prediction_bound": 1750.367,
+      "readiness_category": "peak_season_readiness",
+      "seasonal_rank_percentile": 87.5,
+      "confidence_level": "low",
+      "training_period": {
+        "start": "2000-11",
+        "end": "2022-12",
+        "same_month_samples": 22
+      }
+    },
+    {
+      "target_month": "2023-11",
+      "predicted_fau": 668,
+      "lower_prediction_bound": 0,
+      "upper_prediction_bound": 1619.1,
+      "readiness_category": "elevated_readiness",
+      "seasonal_rank_percentile": 70.833,
+      "confidence_level": "low",
+      "training_period": {
+        "start": "2000-11",
+        "end": "2022-12",
+        "same_month_samples": 23
+      }
+    },
+    {
+      "target_month": "2023-12",
+      "predicted_fau": 420.642,
+      "lower_prediction_bound": 0,
+      "upper_prediction_bound": 1371.742,
+      "readiness_category": "elevated_readiness",
+      "seasonal_rank_percentile": 45.833,
+      "confidence_level": "low",
+      "training_period": {
+        "start": "2000-11",
+        "end": "2022-12",
+        "same_month_samples": 23
+      }
+    }
+  ],
+  "limitations": [
+    "This is a retrospective as-of-2022 outlook for 2023, not a current forecast or observed activity.",
+    "The processed monthly dataset ends December 2022; no 2026 observations are used.",
+    "Backtesting uses VIIRS-primary observations to avoid future-fitted MODIS calibration leakage.",
+    "Historical MODIS-era harmonized training values use calibration estimated from overlap through 2022; do not interpret backtest errors as end-to-end historical pipeline validation.",
+    "A detection-free period does not establish satellite coverage; missingness may bias the monthly series.",
+    "The empirical error bounds are heuristic and have not been independently calibrated for coverage.",
+    "The regional bounding box includes some land outside California.",
+    "FAUs are active 5 km grid-cell days, not separate fires or burned area.",
+    "Readiness categories rank forecast months against one another within the regional annual seasonal cycle, not against same-month anomaly thresholds; they are not emergency warnings.",
+    "Readiness labels are not weather forecasts, evacuation guidance, or predictions of individual fire events."
+  ]
+}

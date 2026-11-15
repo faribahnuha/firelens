@@ -69,3 +69,48 @@ export interface FireLensDataset {
   action_window: HistoricalActionWindow;
 }
 
+export type ReadinessCategory =
+  | "routine_readiness"
+  | "elevated_readiness"
+  | "peak_season_readiness"
+  | "unavailable";
+
+export interface SeasonalForecast {
+  target_month: string;
+  predicted_fau: number | null;
+  lower_prediction_bound: number | null;
+  upper_prediction_bound: number | null;
+  seasonal_rank_percentile: number | null;
+  readiness_category: ReadinessCategory;
+  confidence_level: string;
+  training_period: {
+    start: string | null;
+    end: string;
+    same_month_samples: number;
+  };
+}
+
+export interface SeasonalOutlook {
+  meta: {
+    data_through: string;
+    is_observed_current_activity: false;
+    product_type: string;
+  };
+  region: FireLensRegion;
+  forecast_method: string;
+  held_out_error: {
+    metric: string;
+    value_fau: number;
+    held_out_months: number;
+  };
+  confidence_level: string;
+  forecasts: SeasonalForecast[];
+  limitations: string[];
+}
+
+export interface CurrentSnapshot {
+  status: "unavailable";
+  reason: string;
+  meta: { historical_data_through: string };
+}
+

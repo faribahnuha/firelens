@@ -1,21 +1,28 @@
 import { useEffect, useState } from "react";
 import ActivityTimeline from "./components/ActivityTimeline";
+import ActivityMap from "./components/ActivityMap";
+import CurrentStatus from "./components/CurrentStatus";
 import DataStatus from "./components/DataStatus";
 import FireRhythmCalendar from "./components/FireRhythmCalendar";
 import MetricGrid from "./components/MetricGrid";
+import MethodPanel from "./components/MethodPanel";
+import OperationalBrief from "./components/OperationalBrief";
 import RegionControls from "./components/RegionControls";
 import ViewModeToggle from "./components/ViewModeToggle";
+import SeasonalOutlookPanel from "./components/SeasonalOutlookPanel";
 import { loadFireLensData } from "./data/loadFireLensData";
+import { loadCurrentSnapshot, loadSeasonalOutlook } from "./data/loadSupplementalData";
 import { useFireLensState } from "./state/useFireLensState";
-import type { FireLensDataset } from "./types/firelens";
+import type { CurrentSnapshot, FireLensDataset, SeasonalOutlook } from "./types/firelens";
+import { downloadMonthlyCsv } from "./utils/csvExport";
 import { formatPeriod } from "./utils/formatters";
 
 type LoadState =
   | { status: "loading" }
-  | { status: "ready"; data: FireLensDataset }
+  | { status: "ready"; data: FireLensDataset; outlook: SeasonalOutlook; snapshot: CurrentSnapshot }
   | { status: "error"; message: string };
 
-function Dashboard({ data }: { data: FireLensDataset }) {
+function Dashboard({ data, outlook, snapshot }: { data: FireLensDataset; outlook: SeasonalOutlook; snapshot: CurrentSnapshot }) {
   const {
     selectedPeriod,
     setSelectedPeriod,
@@ -46,6 +53,15 @@ function Dashboard({ data }: { data: FireLensDataset }) {
 
       <MetricGrid month={selectedMonth} mode={activityMode} />
 
+      <OperationalBrief month={selectedMonth} />
+
+      <div className="map-outlook-grid">
+        <ActivityMap month={selectedMonth} region={data.region} />
+        <SeasonalOutlookPanel outlook={outlook} />
+      </div>
+
+      <CurrentStatus snapshot={snapshot} />
+
       <div className="visual-stack">
         <FireRhythmCalendar
           months={data.months}
@@ -59,6 +75,11 @@ function Dashboard({ data }: { data: FireLensDataset }) {
           mode={activityMode}
         />
       </div>
+
+      <div className="data-actions">
+        <button type="button" onClick={() => downloadMonthlyCsv(data)}>Download monthly CSV</button>
+        <MethodPanel data={data} />
+      </div>
     </>
   );
 }
@@ -69,10 +90,10 @@ function App() {
   useEffect(() => {
     let active = true;
 
-    loadFireLensData()
-      .then((data) => {
+    Promise.all([loadFireLensData(), loadSeasonalOutlook(), loadCurrentSnapshot()])
+      .then(([data, outlook, snapshot]) => {
         if (active) {
-          setLoadState({ status: "ready", data });
+          setLoadState({ status: "ready", data, outlook, snapshot });
         }
       })
       .catch((error: unknown) => {
@@ -123,7 +144,7 @@ function App() {
           </section>
         )}
 
-        {loadState.status === "ready" && <Dashboard data={loadState.data} />}
+        {loadState.status === "ready" && <Dashboard data={loadState.data} outlook={loadState.outlook} snapshot={loadState.snapshot} />}
       </main>
     </div>
   );
