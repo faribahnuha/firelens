@@ -123,8 +123,8 @@ function App() {
       </header>
 
       <main id="main-content" className="foundation" tabIndex={-1}>
-        <p className="eyebrow">NASA Space Apps Challenge · Interactive prototype</p>
-        <h1>One fire history. Any satellite. Clearer decisions.</h1>
+        <p className="eyebrow"></p>
+        <h1>FireLens</h1>
         <p className="intro">
           FireLens will transform MODIS and VIIRS hotspot observations into a
           comparable burning-activity calendar. Compare the corrected history
