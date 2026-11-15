@@ -1,23 +1,73 @@
 # FireLens
 
-FireLens is a static React and TypeScript application for the NASA Space Apps
-“Harmonization of MODIS and VIIRS Hot Spots” challenge.
+**One fire history. Any satellite. Clearer decisions.**
 
-## Local development
+FireLens is a static decision-support prototype for the NASA Space Apps Challenge **Harmonization of MODIS and VIIRS Hot Spots** challenge. It converts incompatible NASA FIRMS hotspot observations into a comparable monthly record based on active 5 km grid-cell days.
 
-Requirements: Node.js 20.19 or newer.
+## What FireLens does
+
+- Harmonizes MODIS and VIIRS activity into a consistent historical index.
+- Shows a selectable year-by-month Fire Rhythm Calendar.
+- Demonstrates the sensor transition with raw and harmonized timelines.
+- Replays September 2020 as a responder-oriented historical review.
+- Maps 922 approximate activity-grid polygons for the showcase month.
+- Provides a retrospective 2023 Seasonal Readiness Outlook.
+- Exports monthly evidence as CSV.
+- Exposes validation, uncertainty, data freshness, and limitations.
+
+## Verified showcase
+
+For California in September 2020, the processed dataset reports 6,360 harmonized Fire Activity Units, the 100th historical same-month percentile, approximately 774% above the historical September median, and 922 mapped activity cells. These are activity-index measurements, not counts of separate fires, fire perimeters, or burned area.
+
+## Seasonal outlook
+
+The outlook is a retrospective planning forecast for 2023 using data available through December 2022. Three season-matched models were compared with chronological backtesting. The selected seasonal-median model had a mean absolute error of approximately 452 FAUs over 72 held-out months. Confidence is **low**. August, September, and October fall in the peak-season readiness category.
+
+The outlook is not observed current activity, a weather forecast, an emergency warning, evacuation guidance, or a prediction of individual fires.
+
+## Method
+
+One Fire Activity Unit represents one 5 km grid cell with one or more retained detections during one UTC day. Multiple detections inside the same cell-day do not inflate the main measure. Month-specific calibration factors are estimated from overlapping MODIS and VIIRS observations.
+
+The harmonization validation reports a preliminary 13.6% median absolute percentage error across 132 held-out, detection-positive overlap months. This does not measure uncertainty from missing observations or undetected activity.
+
+Documentation:
+
+- [`docs/person-a/METHOD.md`](docs/person-a/METHOD.md)
+- [`docs/person-a/DATA_SOURCES.md`](docs/person-a/DATA_SOURCES.md)
+- [`docs/person-a/LIMITATIONS.md`](docs/person-a/LIMITATIONS.md)
+
+## Technology
+
+React, TypeScript, Vite, React-Leaflet, OpenStreetMap, Recharts, Python, Vitest, and static JSON/CSV/GeoJSON assets.
+
+## Run locally
+
+Requires Node.js 20.19 or newer.
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Validation
-
 ```bash
-npm run build
 npm test
+npm run build
 ```
 
-The project currently contains the application foundation. Mock-data contracts
-and dashboard features will be added in the next build step.
+## Deployment
+
+Import this repository into Vercel. Use `npm run build` and output directory `dist`.
+
+## Credits
+
+- NASA FIRMS/LANCE MODIS Collection 6.1 active-fire archive
+- NASA FIRMS/LANCE VIIRS Suomi-NPP Collection 2 active-fire archive
+- Map tiles © OpenStreetMap contributors
+
+NASA FIRMS: https://firms.modaps.eosdis.nasa.gov/
+
+This independent prototype is not an official NASA product and is not endorsed by NASA. NASA logos or mission marks are not used.
+
+See [`AI_DISCLOSURE.md`](AI_DISCLOSURE.md).
+

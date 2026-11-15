@@ -1,0 +1,10 @@
+# Demo Shot List
+
+1. Raw activity mode and timeline.
+2. Harmonized activity toggle.
+3. Fire Rhythm Calendar with September 2020 selected.
+4. Historical Priority Review and activity-grid map.
+5. August 2023 Peak-season Readiness Outlook.
+6. Method panel and CSV download.
+
+Record one continuous screen capture if possible. Rehearse cursor movement so no time is spent searching or scrolling.
